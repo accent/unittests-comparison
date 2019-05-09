@@ -1,0 +1,6 @@
+*.dll
+v15
+obj
+*.pdb
+*.json
+/TestLibrary/TestLibrary.nunit/bin/Debug/netcoreapp2.2/*.tmp
