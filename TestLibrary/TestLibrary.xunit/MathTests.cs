@@ -1,3 +1,4 @@
+using FluentAssertions;
 using System.Collections.Generic;
 using Xunit;
 
@@ -17,6 +18,13 @@ namespace TestLibrary.xunit
 		{
 			var result = this.math.SimpleAdd(1, 2);
 			Assert.Equal(3, result);
+		}
+
+		[Fact]
+		public void SimpleAddTestWithFluentAssertion()
+		{
+			var result = this.math.SimpleAdd(1, 2);
+			result.Should().Be(3);
 		}
 
 		[Theory]

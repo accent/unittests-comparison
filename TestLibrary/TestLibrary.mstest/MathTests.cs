@@ -1,3 +1,4 @@
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 
@@ -19,6 +20,13 @@ namespace TestLibrary.mstest
 		{
 			var result = this.math.SimpleAdd(1, 2);
 			Assert.AreEqual(3, result);
+		}
+
+		[TestMethod]
+		public void SimpleAddTestWithFluentAssertion()
+		{
+			var result = this.math.SimpleAdd(1, 2);
+			result.Should().Be(3);
 		}
 
 		[TestMethod]

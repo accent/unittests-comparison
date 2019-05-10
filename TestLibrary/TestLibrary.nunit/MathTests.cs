@@ -1,3 +1,4 @@
+using FluentAssertions;
 using NUnit.Framework;
 using System.Collections.Generic;
 using TestLibrary;
@@ -19,6 +20,13 @@ namespace Tests
 		{
 			var result = this.math.SimpleAdd(1, 2);
 			Assert.AreEqual(3, result);
+		}
+
+		[Test]
+		public void SimpleAddTestWithFluentAssertion()
+		{
+			var result = this.math.SimpleAdd(1, 2);
+			result.Should().Be(3);
 		}
 
 		[TestCase(1, 2, 3)]
